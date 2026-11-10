@@ -9,73 +9,113 @@
 <body>
 
   <div class="container">
-    <!-- 言語切り替えボタン -->
-    <div class="lang-switch-container">
-      <button id="lang-toggle-btn" class="lang-btn">🌐 English</button>
-    </div>
-
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="title">purimotyann <span class="highlight">Portfolio</span></h1>
-      <p class="intro" data-ja="Web開発を学んでいます！制作物やプログラミングの記録です。" data-en="Learning Web Development! Here are my projects and learning records.">Web開発を学んでいます！制作物やプログラミングの記録です。</p>
+      <p class="intro">Web開発を学んでいます！制作物や学習の記録です。</p>
     </header>
 
-    <!-- タブボタンエリア -->
+    <!-- メニュータブボタン -->
     <div class="tab-buttons">
-      <button class="tab-btn active" data-tab="about" data-ja="👤 プロフィール・資格" data-en="👤 Profile & Certs">👤 プロフィール・資格</button>
-      <button class="tab-btn" data-tab="skills" data-ja="💻 スキル・言語" data-en="💻 Skills">💻 スキル・言語</button>
-      <button class="tab-btn" data-tab="projects" data-ja="🚀 制作実績 (Projects)" data-en="🚀 Projects">🚀 制作実績 (Projects)</button>
+      <button class="tab-btn active" data-tab="home">🏠 ホーム</button>
+      <button class="tab-btn" data-tab="projects">🚀 プロジェクト</button>
+      <button class="tab-btn" data-tab="about">📜 これまでの歩み</button>
     </div>
 
-    <!-- タブの中身（コンテンツ） -->
+    <!-- メインコンテンツ -->
     <main class="tab-content-container">
       
-      <!-- タブ1: プロフィール・資格 -->
-      <section id="about" class="tab-content active">
-        <h2 data-ja="About Me & 資格" data-en="About Me & Qualifications">About Me & 資格</h2>
+      <!-- 1. ホームタブ -->
+      <section id="home" class="tab-content active">
+        <h2>Home</h2>
         <div class="card card-purple">
-          <h3 data-ja="自己紹介" data-en="About Me">自己紹介</h3>
-          <p data-ja="はじめまして！使いやすく見やすいWebサービスを目指して日々勉強しています。" data-en="Nice to meet you! I am studying every day to build user-friendly and clear web services.">はじめまして！使いやすく見やすいWebサービスを目指して日々勉強しています。</p>
+          <h3>ようこそ！</h3>
+          <p>purimotyannのポートフォリオサイトです。使いやすく役に立つWebアプリの開発を目指して勉強しています。</p>
         </div>
         <div class="card card-blue">
-          <h3 data-ja="資格・検定" data-en="Qualifications">資格・検定</h3>
-          <ul class="badge-list">
-            <li><span class="badge badge-purple" data-ja="漢検" data-en="Kanji Test">漢検</span> <span data-ja="日本漢字能力検定 3級" data-en="Kanji Aptitude Test Grade 3">日本漢字能力検定 3級</span></li>
-            <li><span class="badge badge-blue" data-ja="英検" data-en="Eiken">英検</span> <span data-ja="実用英語技能検定 準2級" data-en="Eiken Test in Practical English Proficiency Pre-2nd Grade">実用英語技能検定 準2級</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- タブ2: スキル -->
-      <section id="skills" class="tab-content">
-        <h2>Skills</h2>
-        <div class="card card-green">
-          <h3 data-ja="扱える言語・学習中" data-en="Languages & Tech Stack">扱える言語・学習中</h3>
+          <h3>スキル・扱える言語</h3>
           <div class="skill-grid">
-            <div class="skill-item" data-ja="HTML / CSS" data-en="HTML / CSS">HTML / CSS</div>
-            <div class="skill-item" data-ja="Java (学習中)" data-en="Java (Learning)">Java (学習中)</div>
-            <div class="skill-item" data-ja="Python (学習中)" data-en="Python (Learning)">Python (学習中)</div>
-            <div class="skill-item" data-ja="JavaScript (学習中)" data-en="JavaScript (Learning)">JavaScript (学習中)</div>
+            <div class="skill-item">HTML / CSS</div>
+            <div class="skill-item">JavaScript (学習中)</div>
+            <div class="skill-item">Java (学習中)</div>
+            <div class="skill-item">Python (学習中)</div>
           </div>
         </div>
       </section>
 
-      <!-- タブ3: 制作実績 -->
+      <!-- 2. プロジェクトタブ -->
       <section id="projects" class="tab-content">
-        <h2>Projects</h2>
+        <h2>Projects (制作実績)</h2>
+        
         <div class="card card-orange">
-          <h3 data-ja="ポートフォリオWebサイト" data-en="Portfolio Website">ポートフォリオWebサイト</h3>
-          <p data-ja="HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。タブ切り替えやカラフルなデザインを取り入れています。" data-en="My personal portfolio site built using HTML, CSS, and JavaScript. Features tab navigation and dynamic language switching.">HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。タブ切り替えやカラフルなデザインを取り入れています。</p>
+          <h3>学食混雑度リアルタイム共有アプリ</h3>
+          <p>キャンパス内の学食の混雑状況を、学生同士でリアルタイムに共有・確認できるWebアプリケーションです。昼休みの混雑緩和や時間の有効活用を目的に開発しました。</p>
+          <div class="tag-container">
+            <span class="tag tag-html">HTML / CSS</span>
+            <span class="tag tag-js">JavaScript</span>
+            <span class="tag tag-css">GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="card card-pink">
+          <h3>ポートフォリオWebサイト</h3>
+          <p>HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。メニュータブ切り替えやタイムラインデザインを取り入れています。</p>
           <div class="tag-container">
             <span class="tag tag-html">HTML5</span>
             <span class="tag tag-css">CSS3</span>
             <span class="tag tag-js">JavaScript</span>
           </div>
         </div>
+      </section>
+
+      <!-- 3. アバウト（歩み）タブ -->
+      <section id="about" class="tab-content">
+        <h2>これまでの歩み (Timeline)</h2>
         
-        <div class="card card-pink">
-          <h3 data-ja="今後の制作予定作品" data-en="Upcoming Projects">今後の制作予定作品</h3>
-          <p data-ja="学んだ言語（Python/Javaなど）を活用した新たなアプリやWebサイトを制作・追加していく予定です！" data-en="I plan to create and add new apps and websites using the languages I learn (Python, Java, etc.)!">学んだ言語（Python/Javaなど）を活用した新たなアプリやWebサイトを制作・追加していく予定です！</p>
+        <div class="card card-purple">
+          <div class="timeline">
+            
+            <!-- タイムライン項目1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2023年 4月</div>
+              <div class="timeline-content">
+                <h3>高校 入学</h3>
+                <p>高校に入学。学問や課外活動に励む。</p>
+              </div>
+            </div>
+
+            <!-- タイムライン項目2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">資格取得</div>
+              <div class="timeline-content">
+                <h3>検定合格</h3>
+                <p>・日本漢字能力検定（漢検） 3級 取得<br>・実用英語技能検定（英検） 準2級 取得</p>
+              </div>
+            </div>
+
+            <!-- タイムライン項目3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">プログラミング学習</div>
+              <div class="timeline-content">
+                <h3>Web開発・プログラミング開始</h3>
+                <p>HTML / CSS からWeb制作を開始。JavaやPython、JavaScriptなどの言語学習にも挑戦中。</p>
+              </div>
+            </div>
+
+            <!-- タイムライン項目4 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">制作物</div>
+              <div class="timeline-content">
+                <h3>学食混雑度アプリ・ポートフォリオ制作</h3>
+                <p>GitHub Pagesを活用し、自身のポートフォリオサイトやWebアプリケーションの開発を実施。</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
