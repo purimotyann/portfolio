@@ -1,179 +1,25 @@
-/* --- 全体設定（文字選択を許可） --- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  user-select: text; /* 文字を自由に選択できるように指定 */
-  -webkit-user-select: text;
-}
-
-::selection {
-  background-color: #ff9a9e; /* 文字選択時のハイライト色 */
-  color: #ffffff;
-}
-
-body {
-  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
-  line-height: 1.8;
-  color: #2c3e50;
-  /* カラフルで柔らかいグラデーション背景 */
-  background: linear-gradient(135deg, #a8edd8 0%, #fed6e3 100%);
-  min-height: 100vh;
-  padding: 40px 20px;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* --- ヘッダー --- */
-.header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.title {
-  font-size: 2.3rem;
-  color: #2c3e50;
-}
-
-.highlight {
-  color: #ff6b6b;
-  border-bottom: 4px solid #ff6b6b;
-}
-
-.intro {
-  font-size: 1.05rem;
-  color: #576574;
-  margin-top: 8px;
-}
-
-/* --- タブボタンのデザイン --- */
-.tab-buttons {
+/* --- 言語切替ボタンのデザイン --- */
+.lang-switch-container {
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-
-.tab-btn {
-  padding: 12px 20px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  background-color: #ffffff;
-  color: #576574;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-
-.tab-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-}
-
-.tab-btn.active {
-  background: linear-gradient(45deg, #ff6b6b, #ff9ff3);
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-}
-
-/* --- タブコンテンツの切り替え --- */
-.tab-content {
-  display: none; /* 初期状態では非表示 */
-}
-
-.tab-content.active {
-  display: block; /* activeクラスがついたタブだけ表示 */
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #341f97;
-}
-
-/* --- カラフルなカードデザイン --- */
-.card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  border-left: 6px solid #ccc;
-}
-
-.card-purple { border-left-color: #9c88ff; }
-.card-blue { border-left-color: #48dbfb; }
-.card-green { border-left-color: #1dd1a1; }
-.card-orange { border-left-color: #ff9f43; }
-.card-pink { border-left-color: #ff9ff3; }
-
-.card h3 {
-  font-size: 1.2rem;
+  justify-content: flex-end;
   margin-bottom: 10px;
-  color: #2c3e50;
 }
 
-/* --- バッジ・スキルグリッド --- */
-.badge-list { list-style: none; }
-.badge-list li { margin-bottom: 8px; }
-
-.badge {
-  padding: 3px 8px;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-right: 8px;
-}
-.badge-purple { background-color: #9c88ff; }
-.badge-blue { background-color: #48dbfb; }
-
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.skill-item {
-  background-color: #f1f2f6;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-  color: #576574;
-}
-
-/* --- タグ --- */
-.tag-container { margin-top: 15px; }
-.tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: #fff;
-  font-weight: bold;
-  margin-right: 5px;
-}
-.tag-html { background-color: #ff6b6b; }
-.tag-css { background-color: #48dbfb; }
-.tag-js { background-color: #feca57; }
-
-.footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #8395a7;
+.lang-btn {
+  background-color: #ffffff;
+  color: #341f97;
+  border: 2px solid #341f97;
+  padding: 6px 16px;
   font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.lang-btn:hover {
+  background-color: #341f97;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
