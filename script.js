@@ -33,4 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // --- 3. 〇×ゲームの「詳しく見る (About)」開閉 ---
+  const gameDetailBtn = document.getElementById("toggle-game-about");
+  const gameDetailContent = document.getElementById("game-about-content");
+
+  if (gameDetailBtn && gameDetailContent) {
+    gameDetailBtn.addEventListener("click", () => {
+      gameDetailContent.classList.toggle("hidden");
+
+      if (gameDetailContent.classList.contains("hidden")) {
+        gameDetailBtn.textContent = "📖 詳しく見る (画面・プログラム構成・工夫点)";
+      } else {
+        gameDetailBtn.textContent = "✖ 閉じる";
+      }
+    });
+  }
 });
