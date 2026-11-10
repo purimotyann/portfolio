@@ -9,39 +9,80 @@
 <body>
 
   <div class="container">
+    <!-- ヘッダー -->
     <header class="header">
-      <h1>purimotyannのポートフォリオ</h1>
-      <p class="intro">こんにちは！Web開発を学んでいます。</p>
+      <h1 class="title">purimotyann <span class="highlight">Portfolio</span></h1>
+      <p class="intro">Web開発を学んでいます！制作物やプログラミングの記録です。</p>
     </header>
 
-    <main>
-      <section class="card">
-        <h2>資格・検定</h2>
-        <ul class="skill-list">
-          <li>日本漢字能力検定 3級</li>
-          <li>実用英語技能検定 準2級</li>
-        </ul>
-      </section>
+    <!-- タブボタンエリア -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="about">👤 プロフィール・資格</button>
+      <button class="tab-btn" data-tab="skills">💻 スキル・言語</button>
+      <button class="tab-btn" data-tab="projects">🚀 制作実績 (Projects)</button>
+    </div>
 
-      <section class="card">
-        <h2>扱える言語・学習中の言語</h2>
-        <ul class="skill-list">
-          <li>HTML / CSS</li>
-          <li>Java（学習中）</li>
-          <li>Python（学習中）</li>
-          <li>JavaScript（学習中）</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>制作実績 (Projects)</h2>
-        <div class="project-box">
-          <h3>ポートフォリオサイト</h3>
-          <p>HTML/CSSを使って作成した自分の紹介サイトです。</p>
+    <!-- タブの中身（コンテンツ） -->
+    <main class="tab-content-container">
+      
+      <!-- タブ1: プロフィール・資格 -->
+      <section id="about" class="tab-content active">
+        <h2>About Me & 資格</h2>
+        <div class="card card-purple">
+          <h3>自己紹介</h3>
+          <p>はじめまして！使いやすく見やすいWebサービスを目指して日々勉強しています。</p>
+        </div>
+        <div class="card card-blue">
+          <h3>資格・検定</h3>
+          <ul class="badge-list">
+            <li><span class="badge badge-purple">漢検</span> 日本漢字能力検定 3級</li>
+            <li><span class="badge badge-blue">英検</span> 実用英語技能検定 準2級</li>
+          </ul>
         </div>
       </section>
+
+      <!-- タブ2: スキル -->
+      <section id="skills" class="tab-content">
+        <h2>Skills</h2>
+        <div class="card card-green">
+          <h3>扱える言語・学習中</h3>
+          <div class="skill-grid">
+            <div class="skill-item">HTML / CSS</div>
+            <div class="skill-item">Java (学習中)</div>
+            <div class="skill-item">Python (学習中)</div>
+            <div class="skill-item">JavaScript (学習中)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- タブ3: 制作実績 -->
+      <section id="projects" class="tab-content">
+        <h2>Projects</h2>
+        <div class="card card-orange">
+          <h3>ポートフォリオWebサイト</h3>
+          <p>HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。タブ切り替えやカラフルなデザインを取り入れています。</p>
+          <div class="tag-container">
+            <span class="tag tag-html">HTML5</span>
+            <span class="tag tag-css">CSS3</span>
+            <span class="tag tag-js">JavaScript</span>
+          </div>
+        </div>
+        
+        <!-- 実績を増やす場合はここにカードを追加できます -->
+        <div class="card card-pink">
+          <h3>今後の制作予定作品</h3>
+          <p>学んだ言語（Python/Javaなど）を活用した新たなアプリやWebサイトを制作・追加していく予定です！</p>
+        </div>
+      </section>
+
     </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <p>&copy; 2026 purimotyann. All Rights Reserved.</p>
+    </footer>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
