@@ -94,7 +94,7 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, height 0.3s ease;
 }
 
 .card:hover {
@@ -209,7 +209,7 @@ body {
   color: #555;
 }
 
-/* --- アプリ詳細ボタン & アコーディオン --- */
+/* --- アプリ詳細ボタン & カード内展開 --- */
 .detail-btn {
   background-color: #e67e22;
   color: white;
@@ -227,12 +227,12 @@ body {
   background-color: #d35400;
 }
 
+/* 展開エリア（カード内で下に向かってスムーズに広がる） */
 .app-detail-box {
-  margin-top: 12px;
-  padding: 15px;
-  background-color: #ffffff;
-  border: 2px dashed #e67e22;
-  border-radius: 12px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px dashed rgba(230, 126, 34, 0.4);
+  animation: fadeIn 0.3s ease;
 }
 
 .app-detail-box.hidden {
@@ -242,11 +242,13 @@ body {
 .feature-list {
   list-style: none;
   padding-left: 0;
+  margin-top: 6px;
 }
 
 .feature-list li {
   font-size: 0.85rem;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: #444;
 }
 
 .status-guide {
@@ -257,15 +259,15 @@ body {
 }
 
 .status-badge {
-  padding: 4px 8px;
+  padding: 6px 10px;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-.status-badge.green  { background-color: #e8f8f5; color: #27ae60; }
-.status-badge.yellow { background-color: #fef9e7; color: #f39c12; }
-.status-badge.red    { background-color: #fdedec; color: #e74c3c; }
+.status-badge.green  { background-color: #ffffff; color: #27ae60; border: 1px solid #27ae60; }
+.status-badge.yellow { background-color: #ffffff; color: #f39c12; border: 1px solid #f39c12; }
+.status-badge.red    { background-color: #ffffff; color: #e74c3c; border: 1px solid #e74c3c; }
 
 /* フッター */
 .footer {
