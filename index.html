@@ -36,13 +36,12 @@
         <!-- 資格・検定カード -->
         <div class="card card-pink">
           <h3>資格・検定</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
+          <ul style="list-style: none; padding: 0;">
             <li style="margin-bottom: 8px;"><strong>漢検</strong>：日本漢字能力検定 3級 合格</li>
             <li><strong>英検</strong>：実用英語技能検定 準2級 合格</li>
           </ul>
         </div>
 
-        <!-- スキルカード -->
         <div class="card card-blue">
           <h3>スキル・扱える言語</h3>
           <div class="skill-grid">
@@ -61,48 +60,31 @@
         <!-- 学食アプリのカード -->
         <div class="card card-orange">
           <h3>学食混雑度リアルタイム共有アプリ</h3>
-          <p>食堂の混み具合やメニューの販売状況を、ブラウザから確認できるWebアプリです。食堂へ行く前の状況確認や管理者による情報更新に使えます。</p>
+          <p>キャンパス内の学食の混雑状況を、学生同士でリアルタイムに共有・確認できるWebアプリケーションです。昼休みの混雑緩和や時間の有効活用を目的に開発しました。</p>
           <div class="tag-container" style="margin-bottom: 15px;">
             <span class="tag tag-html">HTML / CSS</span>
             <span class="tag tag-js">JavaScript</span>
-            <span class="tag tag-css">Java</span>
-            <span class="tag tag-css">Python</span>
             <span class="tag tag-css">GitHub Pages</span>
           </div>
 
           <!-- 詳細表示ボタン (About) -->
-          <button id="toggle-app-about" class="detail-btn">📖 詳しく見る (アプリ概要・機能・画像)</button>
+          <button id="toggle-app-about" class="detail-btn">📖 詳しく見る (アプリ概要・イメージ)</button>
 
           <!-- 押したら開く詳細コンテンツ -->
           <div id="app-about-content" class="app-detail-box hidden">
-            <h4>📱 アプリの概要</h4>
-            <p>食堂の混み具合やメニューの販売状況をブラウザからリアルタイムで確認できます。Java / Pythonを活用したデータ処理やAIによる自動計測、10分後・20分後の混雑予測機能も備えています。</p>
-
-            <h4 style="margin-top: 15px;">✨ 主な機能</h4>
-            <ul class="feature-list">
-              <li><strong>混雑状況の確認：</strong> 現在人数・利用率・混雑度・最終更新日時を表示</li>
-              <li><strong>AIによる人数計測：</strong> カメラ映像から人物を検出し、利用人数を自動計測</li>
-              <li><strong>混雑予測：</strong> 計測履歴から10分後・20分後の人数を推定</li>
-              <li><strong>メニューの販売状況：</strong> カレー・ラーメン・唐揚げ定食・日替わりの売り切れ状況を表示</li>
-              <li><strong>お知らせ & 自動更新：</strong> 食堂からの案内を表示し、データを自動更新</li>
-              <li><strong>管理者機能：</strong> ログインした管理者が人数・販売状況・お知らせを更新可能</li>
-            </ul>
-
-            <h4 style="margin-top: 15px;">📊 混雑度の見方（定員40名基準）</h4>
-            <div class="status-guide">
-              <span class="status-badge green">30%未満：🟢 空いている</span>
-              <span class="status-badge yellow">30%〜70%：🟡 普通</span>
-              <span class="status-badge red">70%以上：🔴 混雑</span>
-            </div>
+            <h4>📱 アプリ概要 & 画面イメージ</h4>
+            <p>昼休み直後の学食の混雑具合を「空いている」「普通」「混雑」の3段階で投稿・確認できます。</p>
             
-            <!-- 写真を表示するエリア -->
-            <div class="img-preview-box" style="margin-top: 15px;">
-              <img src="gakushoku.png" alt="学食混雑度アプリの画面イメージ" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <!-- イメージ画像表示エリア (画像を用意したら src を書き換えてください) -->
+            <div class="img-preview-box">
+              <div class="img-placeholder">
+                <p>🖼️ アプリ画面イメージ</p>
+                <small>（ここにスクリーンショット画像が表示されます）</small>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- ポートフォリオカード -->
         <div class="card card-pink">
           <h3>ポートフォリオWebサイト</h3>
           <p>HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。メニュータブ切り替えやタイムラインデザインを取り入れています。</p>
