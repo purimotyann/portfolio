@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       detailContent.classList.toggle("hidden");
 
       if (detailContent.classList.contains("hidden")) {
-        detailBtn.textContent = "📖 詳しく見る (アプリ概要・機能・画像)";
+        detailBtn.textContent = "📖 詳しく見る (画面構成・機能詳細)";
       } else {
         detailBtn.textContent = "✖ 閉じる";
       }
