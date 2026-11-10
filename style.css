@@ -1,31 +1,49 @@
-/* 機能一覧と混雑度ガイドのスタイル */
-.feature-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 8px;
-}
-
-.feature-list li {
+/* --- アプリ詳細ボタンとアコーディオン枠 --- */
+.detail-btn {
+  background-color: #ff9f43;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
   font-size: 0.9rem;
-  margin-bottom: 6px;
-  line-height: 1.5;
-  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.status-guide {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
+.detail-btn:hover {
+  background-color: #ee5253;
+  transform: translateY(-1px);
 }
 
-.status-badge {
-  padding: 6px 12px;
+.app-detail-box {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff9f0;
+  border: 2px dashed #ff9f43;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.app-detail-box.hidden {
+  display: none;
+}
+
+.app-detail-box h4 {
+  color: #d35400;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.img-preview-box {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.img-placeholder {
+  background-color: #ffeaa7;
   border-radius: 8px;
-  font-size: 0.85rem;
+  padding: 30px 15px;
+  color: #d35400;
   font-weight: bold;
 }
-
-.status-badge.green { background-color: #e8f8f5; color: #27ae60; }
-.status-badge.yellow { background-color: #fef9e7; color: #f39c12; }
-.status-badge.red { background-color: #fdedec; color: #e74c3c; }
