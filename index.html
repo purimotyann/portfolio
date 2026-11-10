@@ -9,17 +9,22 @@
 <body>
 
   <div class="container">
+    <!-- 言語切り替えボタン -->
+    <div class="lang-switch-container">
+      <button id="lang-toggle-btn" class="lang-btn">🌐 English</button>
+    </div>
+
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="title">purimotyann <span class="highlight">Portfolio</span></h1>
-      <p class="intro">Web開発を学んでいます！制作物やプログラミングの記録です。</p>
+      <p class="intro" data-ja="Web開発を学んでいます！制作物やプログラミングの記録です。" data-en="Learning Web Development! Here are my projects and learning records.">Web開発を学んでいます！制作物やプログラミングの記録です。</p>
     </header>
 
     <!-- タブボタンエリア -->
     <div class="tab-buttons">
-      <button class="tab-btn active" data-tab="about">👤 プロフィール・資格</button>
-      <button class="tab-btn" data-tab="skills">💻 スキル・言語</button>
-      <button class="tab-btn" data-tab="projects">🚀 制作実績 (Projects)</button>
+      <button class="tab-btn active" data-tab="about" data-ja="👤 プロフィール・資格" data-en="👤 Profile & Certs">👤 プロフィール・資格</button>
+      <button class="tab-btn" data-tab="skills" data-ja="💻 スキル・言語" data-en="💻 Skills">💻 スキル・言語</button>
+      <button class="tab-btn" data-tab="projects" data-ja="🚀 制作実績 (Projects)" data-en="🚀 Projects">🚀 制作実績 (Projects)</button>
     </div>
 
     <!-- タブの中身（コンテンツ） -->
@@ -27,16 +32,16 @@
       
       <!-- タブ1: プロフィール・資格 -->
       <section id="about" class="tab-content active">
-        <h2>About Me & 資格</h2>
+        <h2 data-ja="About Me & 資格" data-en="About Me & Qualifications">About Me & 資格</h2>
         <div class="card card-purple">
-          <h3>自己紹介</h3>
-          <p>はじめまして！使いやすく見やすいWebサービスを目指して日々勉強しています。</p>
+          <h3 data-ja="自己紹介" data-en="About Me">自己紹介</h3>
+          <p data-ja="はじめまして！使いやすく見やすいWebサービスを目指して日々勉強しています。" data-en="Nice to meet you! I am studying every day to build user-friendly and clear web services.">はじめまして！使いやすく見やすいWebサービスを目指して日々勉強しています。</p>
         </div>
         <div class="card card-blue">
-          <h3>資格・検定</h3>
+          <h3 data-ja="資格・検定" data-en="Qualifications">資格・検定</h3>
           <ul class="badge-list">
-            <li><span class="badge badge-purple">漢検</span> 日本漢字能力検定 3級</li>
-            <li><span class="badge badge-blue">英検</span> 実用英語技能検定 準2級</li>
+            <li><span class="badge badge-purple" data-ja="漢検" data-en="Kanji Test">漢検</span> <span data-ja="日本漢字能力検定 3級" data-en="Kanji Aptitude Test Grade 3">日本漢字能力検定 3級</span></li>
+            <li><span class="badge badge-blue" data-ja="英検" data-en="Eiken">英検</span> <span data-ja="実用英語技能検定 準2級" data-en="Eiken Test in Practical English Proficiency Pre-2nd Grade">実用英語技能検定 準2級</span></li>
           </ul>
         </div>
       </section>
@@ -45,12 +50,12 @@
       <section id="skills" class="tab-content">
         <h2>Skills</h2>
         <div class="card card-green">
-          <h3>扱える言語・学習中</h3>
+          <h3 data-ja="扱える言語・学習中" data-en="Languages & Tech Stack">扱える言語・学習中</h3>
           <div class="skill-grid">
             <div class="skill-item">HTML / CSS</div>
-            <div class="skill-item">Java (学習中)</div>
-            <div class="skill-item">Python (学習中)</div>
-            <div class="skill-item">JavaScript (学習中)</div>
+            <div class="skill-item" data-ja="Java (学習中)" data-en="Java (Learning)">Java (学習中)</div>
+            <div class="skill-item" data-ja="Python (学習中)" data-en="Python (Learning)">Python (学習中)</div>
+            <div class="skill-item" data-ja="JavaScript (学習中)" data-en="JavaScript (Learning)">JavaScript (学習中)</div>
           </div>
         </div>
       </section>
@@ -59,8 +64,8 @@
       <section id="projects" class="tab-content">
         <h2>Projects</h2>
         <div class="card card-orange">
-          <h3>ポートフォリオWebサイト</h3>
-          <p>HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。タブ切り替えやカラフルなデザインを取り入れています。</p>
+          <h3 data-ja="ポートフォリオWebサイト" data-en="Portfolio Website">ポートフォリオWebサイト</h3>
+          <p data-ja="HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。タブ切り替えやカラフルなデザインを取り入れています。" data-en="My personal portfolio site built using HTML, CSS, and JavaScript. Features tab navigation and dynamic language switching.">HTML / CSS / JavaScript を使って制作した自身のポートフォリオです。タブ切り替えやカラフルなデザインを取り入れています。</p>
           <div class="tag-container">
             <span class="tag tag-html">HTML5</span>
             <span class="tag tag-css">CSS3</span>
@@ -68,10 +73,9 @@
           </div>
         </div>
         
-        <!-- 実績を増やす場合はここにカードを追加できます -->
         <div class="card card-pink">
-          <h3>今後の制作予定作品</h3>
-          <p>学んだ言語（Python/Javaなど）を活用した新たなアプリやWebサイトを制作・追加していく予定です！</p>
+          <h3 data-ja="今後の制作予定作品" data-en="Upcoming Projects">今後の制作予定作品</h3>
+          <p data-ja="学んだ言語（Python/Javaなど）を活用した新たなアプリやWebサイトを制作・追加していく予定です！" data-en="I plan to create and add new apps and websites using the languages I learn (Python, Java, etc.)!">学んだ言語（Python/Javaなど）を活用した新たなアプリやWebサイトを制作・追加していく予定です！</p>
         </div>
       </section>
 
