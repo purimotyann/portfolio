@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 1. タブ切り替え処理 ---
+  // --- 1. Tab Switching ---
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabContents = document.querySelectorAll(".tab-content");
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 2. 言語切り替え（日英）処理 ---
+  // --- 2. Language Toggle ---
   const langBtn = document.getElementById("lang-toggle-btn");
   let currentLang = "ja";
 
@@ -27,10 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
       currentLang = currentLang === "ja" ? "en" : "ja";
       langBtn.textContent = currentLang === "ja" ? "🌐 English" : "🌐 日本語";
 
-      // data-ja と data-en を持つ要素をすべて取得して書き換え
       const translatableElements = document.querySelectorAll("[data-ja][data-en]");
       translatableElements.forEach((el) => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
+        const text = el.getAttribute(`data-${currentLang}`);
+        if (text) {
+          el.textContent = text;
+        }
       });
     });
   }
