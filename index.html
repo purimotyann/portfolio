@@ -58,10 +58,11 @@
       <section id="projects" class="tab-content">
         <h2>Projects (制作実績)</h2>
         
-        <!-- 学食アプリのカード -->
+        <!-- 学食アプリのカード (カード全体が自然に展開します) -->
         <div class="card card-orange">
           <h3>学食混雑度リアルタイム共有アプリ</h3>
-          <p>食堂の混み具合やメニューの販売状況を、ブラウザから確認できるWebアプリです。食堂へ行く前の状況確認や管理者による情報更新に使えます。</p>
+          <p>食堂の混み具合やメニューの販売状況を、ブラウザから確認できるWebアプリです。現在の利用人数と混雑度に加えて、10分後・20分後の混雑予測も確認できます。食堂へ行く前の状況確認や、管理者による食堂情報の更新に使えます。</p>
+          
           <div class="tag-container" style="margin-bottom: 15px;">
             <span class="tag tag-html">HTML / CSS</span>
             <span class="tag tag-js">JavaScript</span>
@@ -71,31 +72,33 @@
           </div>
 
           <!-- 詳細表示ボタン (About) -->
-          <button id="toggle-app-about" class="detail-btn">📖 詳しく見る (アプリ概要・機能・画像)</button>
+          <button id="toggle-app-about" class="detail-btn">📖 詳しく見る (概要・機能詳細)</button>
 
-          <!-- 押したら開く詳細コンテンツ -->
+          <!-- ボタンを押すと展開するコンテンツ -->
           <div id="app-about-content" class="app-detail-box hidden">
-            <h4>📱 アプリの概要</h4>
-            <p>食堂の混み具合やメニューの販売状況をブラウザからリアルタイムで確認できます。Java / Pythonを活用したデータ処理やAIによる自動計測、10分後・20分後の混雑予測機能も備えています。</p>
-
-            <h4 style="margin-top: 15px;">✨ 主な機能</h4>
+            <h4 style="margin-top: 10px;">✨ 主な機能</h4>
             <ul class="feature-list">
               <li><strong>混雑状況の確認：</strong> 現在人数・利用率・混雑度・最終更新日時を表示</li>
               <li><strong>AIによる人数計測：</strong> カメラ映像から人物を検出し、利用人数を自動計測</li>
               <li><strong>混雑予測：</strong> 計測履歴から10分後・20分後の人数を推定</li>
-              <li><strong>メニューの販売状況：</strong> カレー・ラーメン・唐揚げ定食・日替わりの売り切れ状況を表示</li>
-              <li><strong>お知らせ & 自動更新：</strong> 食堂からの案内を表示し、データを自動更新</li>
-              <li><strong>管理者機能：</strong> ログインした管理者が人数・販売状況・お知らせを更新可能</li>
+              <li><strong>メニューの販売状況：</strong> カレーライス・ラーメン・唐揚げ定食・日替わり定食の販売中／売り切れを表示</li>
+              <li><strong>お知らせ：</strong> 食堂からの案内を表示</li>
+              <li><strong>自動更新：</strong> 新しいデータを自動で取得（3分以上更新停止時は警告表示）</li>
+              <li><strong>管理者機能：</strong> ログインした管理者が人数・販売状況・お知らせを更新・保存可能</li>
             </ul>
 
             <h4 style="margin-top: 15px;">📊 混雑度の見方（定員40名基準）</h4>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">利用人数から利用率を計算し、3段階で混み具合を表示します。</p>
             <div class="status-guide">
               <span class="status-badge green">30%未満：🟢 空いている</span>
-              <span class="status-badge yellow">30%〜70%：🟡 普通</span>
+              <span class="status-badge yellow">30%以上・70%未満：🟡 普通</span>
               <span class="status-badge red">70%以上：🔴 混雑</span>
             </div>
+
+            <h4 style="margin-top: 15px;">💡 使い方</h4>
+            <p style="font-size: 0.85rem; color: #555;">混雑表示画面を開くと、ログインせずに混雑状況・予測・メニュー・お知らせを確認できます。画面の情報は自動で更新されます。</p>
             
-            <!-- 写真を表示するエリア -->
+            <!-- 実際の写真を読み込むエリア -->
             <div class="img-preview-box" style="margin-top: 15px;">
               <img src="gakushoku.png" alt="学食混雑度アプリの画面イメージ" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
             </div>
