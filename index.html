@@ -45,7 +45,7 @@
           <p>purimotyannのポートフォリオサイトです。使いやすく役に立つWebアプリの開発を目指して勉強しています。</p>
         </div>
 
-        <!-- 所属・コース（追加） -->
+        <!-- 所属・コース -->
         <div class="card card-green">
           <h3>所属・コース</h3>
           <p style="font-size: 1.05rem; font-weight: bold; color: #2c3e50;">
@@ -181,6 +181,84 @@
             <h4 style="color: #e67e22;">🔳 QRコード</h4>
             <div class="img-preview-box" style="margin-top: 10px; text-align: center;">
               <img src="qr_code.jpg" alt="学食混雑度アプリ QRコード" style="max-width: 180px; height: auto; border-radius: 8px; border: 1px solid #ddd; padding: 5px; background: white;">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 〇×ゲーム (新規追加カード) -->
+        <div class="card card-purple">
+          <h3>Google Colab ボタン操作式 〇×ゲーム（GUI・思考AI・拡張ルール対応）</h3>
+          <p>Google Colab上で起動して遊べる、視覚的で扱いやすいボタン操作式（GUI）の〇×ゲームです。直感的なクリック操作でプレイでき、2人ローカル対戦や自動防御ロジック搭載のコンピュータ（AI）対戦に対応。さらに通常3x3マスルールに加え、広大なフィールドで頭脳戦を楽しめる10x10マス（5連勝利）ルールを選択可能です。</p>
+
+          <!-- PROJECT INFO -->
+          <div style="margin: 15px 0; padding: 15px; background: #ffffff; border-radius: 12px; border: 1px solid #e1bee7; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+            <h4 style="font-size: 0.95rem; color: #8e44ad; margin-bottom: 10px; font-weight: bold;">📋 PROJECT INFO</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.85rem;">
+              <div>
+                <span style="color: #888; font-size: 0.75rem; display: block; font-weight: bold;">TYPE</span>
+                <span style="color: #333; font-weight: bold;">個人制作（プログラミング課題04）</span>
+              </div>
+              <div>
+                <span style="color: #888; font-size: 0.75rem; display: block; font-weight: bold;">制作時間</span>
+                <span style="color: #333; font-weight: bold;">約8時間</span>
+              </div>
+              <div>
+                <span style="color: #888; font-size: 0.75rem; display: block; font-weight: bold;">TECHNOLOGY</span>
+                <span style="color: #333; font-weight: bold;">Python / Google Colab / ipywidgets / IPython.display</span>
+              </div>
+              <div>
+                <span style="color: #888; font-size: 0.75rem; display: block; font-weight: bold;">FEATURES</span>
+                <span style="color: #8e44ad; font-weight: bold;">GUI操作 / 思考AI / 10x10五目並べ拡張</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colab / GitHub リンク -->
+          <div style="margin: 15px 0; padding: 12px; background: #fff; border-radius: 10px; border: 1px solid #d1c4e9;">
+            <p style="font-weight: bold; margin-bottom: 5px; color: #8e44ad;">🔗 ソースコード・ノートブックを見る：</p>
+            <p style="margin-bottom: 4px;"><a href="task04_35_HT.ipynb" target="_blank" rel="noopener noreferrer" style="color: #8e44ad; word-break: break-all; font-weight: bold; text-decoration: underline;">プログラミング課題04 ノートブック (.ipynb) を開く</a></p>
+          </div>
+
+          <div class="tag-container" style="margin-bottom: 15px;">
+            <span class="tag tag-html" style="background-color: #3776ab;">Python</span>
+            <span class="tag tag-js" style="background-color: #f9ab00; color: #fff;">Google Colab</span>
+            <span class="tag tag-css" style="background-color: #8e44ad;">ipywidgets</span>
+          </div>
+
+          <!-- 詳細表示ボタン -->
+          <button id="toggle-game-about" class="detail-btn" style="background-color: #8e44ad;">📖 詳しく見る (画面・プログラム構成・工夫点)</button>
+
+          <!-- 開閉コンテンツ -->
+          <div id="game-about-content" class="app-detail-box hidden" style="border-top-color: rgba(142, 68, 173, 0.4);">
+            
+            <h4 style="margin-top: 10px; color: #8e44ad;">🎮 プログラムの特徴と開発上の工夫</h4>
+            <ul class="feature-list">
+              <li><strong>直感的なGUIデザイン：</strong> マス目に数字などを出さず、クリックした場所だけに色付きの〇・✕を配置するスッキリした画面構成。</li>
+              <li><strong>柔軟なルール選択：</strong> 通常の「3×3マス（3連勝利）」と広大な「10×10マス（5連勝利）」をメニューから自由に切り替え可能。</li>
+              <li><strong>思考アルゴリズム：</strong> 自分が勝てる手の検索・相手の王手を防ぐライン自動ブロック機能を実装。</li>
+              <li><strong>汎用的な判定ロジック：</strong> 3×3と10×10の両方で斜め・縦・横の連続判定を実行できる多重ループ処理を構築。</li>
+            </ul>
+
+            <!-- 画像4枚レイアウト表示 -->
+            <p style="font-size: 0.8rem; color: #777; margin: 15px 0 5px 0; font-weight: bold;">【設定メニュー・プレイ画面イメージ（画像4枚）】</p>
+            <div class="img-preview-box" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 15px;">
+              <div style="text-align: center;">
+                <p style="font-size: 0.75rem; color: #666; margin-bottom: 4px; font-weight: bold;">1. 設定メニュー画面</p>
+                <img src="menu.png" alt="設定メニュー画面" style="width: 100%; max-width: 280px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); border: 1px solid #eee;">
+              </div>
+              <div style="text-align: center;">
+                <p style="font-size: 0.75rem; color: #666; margin-bottom: 4px; font-weight: bold;">2. 3x3 通常ルール対戦</p>
+                <img src="3game.png" alt="3x3 通常ルール対戦画面" style="width: 100%; max-width: 280px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); border: 1px solid #eee;">
+              </div>
+              <div style="text-align: center;">
+                <p style="font-size: 0.75rem; color: #666; margin-bottom: 4px; font-weight: bold;">3. 10x10 広大スペース対戦</p>
+                <img src="5game.png" alt="10x10 広大スペース対戦画面" style="width: 100%; max-width: 280px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); border: 1px solid #eee;">
+              </div>
+              <div style="text-align: center;">
+                <p style="font-size: 0.75rem; color: #666; margin-bottom: 4px; font-weight: bold;">4. 勝利判定・終了画面</p>
+                <img src="win.png" alt="勝利判定・終了画面" style="width: 100%; max-width: 280px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); border: 1px solid #eee;">
+              </div>
             </div>
 
           </div>
