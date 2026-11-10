@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 2. 学食アプリの「詳細(About)」アコーディオン開閉 ---
+  // --- 2. 学食アプリの「詳しく見る (About)」開閉 ---
   const detailBtn = document.getElementById("toggle-app-about");
   const detailContent = document.getElementById("app-about-content");
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       detailContent.classList.toggle("hidden");
 
       if (detailContent.classList.contains("hidden")) {
-        detailBtn.textContent = "📖 詳しく見る (アプリ概要・イメージ)";
+        detailBtn.textContent = "📖 詳しく見る (アプリ概要・機能・画像)";
       } else {
         detailBtn.textContent = "✖ 閉じる";
       }
