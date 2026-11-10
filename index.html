@@ -58,11 +58,18 @@
       <section id="projects" class="tab-content">
         <h2>Projects (制作実績)</h2>
         
-        <!-- 学食アプリのカード (カード全体が自然に展開します) -->
+        <!-- 学食アプリのカード -->
         <div class="card card-orange">
           <h3>学食混雑度リアルタイム共有アプリ</h3>
           <p>食堂の混み具合やメニューの販売状況を、ブラウザから確認できるWebアプリです。現在の利用人数と混雑度に加えて、10分後・20分後の混雑予測も確認できます。食堂へ行く前の状況確認や、管理者による食堂情報の更新に使えます。</p>
-          
+
+          <!-- Webサイトリンク案内 -->
+          <div style="margin: 15px 0; padding: 12px; background: #fff; border-radius: 10px; border: 1px solid #ffd8a8;">
+            <p style="font-weight: bold; margin-bottom: 5px; color: #d9480f;">🔗 Webアプリを開く：</p>
+            <p style="margin-bottom: 8px;"><a href="https://yotamaaikich.github.io/cafeteria-site/" target="_blank" rel="noopener noreferrer" style="color: #e67e22; word-break: break-all; font-weight: bold; text-decoration: underline;">https://yotamaaikich.github.io/cafeteria-site/</a></p>
+            <p style="font-size: 0.85rem; color: #666;">※ カメラでQRコードを読み取っても開けます。</p>
+          </div>
+
           <div class="tag-container" style="margin-bottom: 15px;">
             <span class="tag tag-html">HTML / CSS</span>
             <span class="tag tag-js">JavaScript</span>
@@ -72,36 +79,63 @@
           </div>
 
           <!-- 詳細表示ボタン (About) -->
-          <button id="toggle-app-about" class="detail-btn">📖 詳しく見る (概要・機能詳細)</button>
+          <button id="toggle-app-about" class="detail-btn">📖 詳しく見る (画面構成・機能詳細)</button>
 
           <!-- ボタンを押すと展開するコンテンツ -->
           <div id="app-about-content" class="app-detail-box hidden">
-            <h4 style="margin-top: 10px;">✨ 主な機能</h4>
+            
+            <!-- 1. 利用者画面の説明 -->
+            <h4 style="margin-top: 10px; color: #e67e22;">📱 利用者（使用する人）の画面</h4>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 8px;">混雑表示画面を開くと、ログインせずにリアルタイムの混雑状況・予測・メニュー・お知らせを確認できます。</p>
             <ul class="feature-list">
-              <li><strong>混雑状況の確認：</strong> 現在人数・利用率・混雑度・最終更新日時を表示</li>
-              <li><strong>AIによる人数計測：</strong> カメラ映像から人物を検出し、利用人数を自動計測</li>
-              <li><strong>混雑予測：</strong> 計測履歴から10分後・20分後の人数を推定</li>
-              <li><strong>メニューの販売状況：</strong> カレーライス・ラーメン・唐揚げ定食・日替わり定食の販売中／売り切れを表示</li>
+              <li><strong>混雑状況の確認：</strong> 現在人数・利用率・混雑度（空いている／普通／混雑）・最終更新日時を表示</li>
+              <li><strong>混雑予測：</strong> 計測履歴から10分後・20分後の人数を自動推定</li>
+              <li><strong>本日のメニュー：</strong> カレーライス・ラーメン・唐揚げ定食・日替わり定食の販売中／売り切れを表示</li>
               <li><strong>お知らせ：</strong> 食堂からの案内を表示</li>
               <li><strong>自動更新：</strong> 新しいデータを自動で取得（3分以上更新停止時は警告表示）</li>
-              <li><strong>管理者機能：</strong> ログインした管理者が人数・販売状況・お知らせを更新・保存可能</li>
             </ul>
 
-            <h4 style="margin-top: 15px;">📊 混雑度の見方（定員40名基準）</h4>
-            <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">利用人数から利用率を計算し、3段階で混み具合を表示します。</p>
-            <div class="status-guide">
+            <h5 style="margin-top: 10px; font-size: 0.9rem;">📊 混雑度の基準（定員40名）</h5>
+            <div class="status-guide" style="margin-bottom: 12px;">
               <span class="status-badge green">30%未満：🟢 空いている</span>
               <span class="status-badge yellow">30%以上・70%未満：🟡 普通</span>
               <span class="status-badge red">70%以上：🔴 混雑</span>
             </div>
 
-            <h4 style="margin-top: 15px;">💡 使い方</h4>
-            <p style="font-size: 0.85rem; color: #555;">混雑表示画面を開くと、ログインせずに混雑状況・予測・メニュー・お知らせを確認できます。画面の情報は自動で更新されます。</p>
-            
-            <!-- 実際の写真を読み込むエリア -->
-            <div class="img-preview-box" style="margin-top: 15px;">
-              <img src="gakushoku.png" alt="学食混雑度アプリの画面イメージ" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <!-- 利用者画面の写真（2枚並べて表示） -->
+            <p style="font-size: 0.8rem; color: #777; margin-bottom: 5px; font-weight: bold;">【利用者画面イメージ（混雑状況・メニュー・お知らせ）】</p>
+            <div class="img-preview-box" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+              <img src="user1.jpg" alt="利用者画面 混雑状況・予測" style="flex: 1; min-width: 240px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+              <img src="user2.jpg" alt="利用者画面 メニュー・お知らせ" style="flex: 1; min-width: 240px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
             </div>
+
+            <hr style="border: none; border-top: 1px dashed #e67e22; margin: 20px 0;">
+
+            <!-- 2. 管理者画面の説明 -->
+            <h4 style="color: #e67e22;">⚙️ 管理者（管理する人）の画面</h4>
+            <p style="font-size: 0.85rem; color: #555; margin-bottom: 8px;">ログインした管理者のみがアクセス可能で、食堂のデータ更新やAIカメラの操作を行えます。</p>
+            <ul class="feature-list">
+              <li><strong>AI人数認識：</strong> カメラ映像から人物を自動検出し、人数をリアルタイム計測</li>
+              <li><strong>販売状況の変更：</strong> メニューごとの販売中／売り切れのチェックを切り替え</li>
+              <li><strong>お知らせの更新：</strong> 利用者画面へ表示するテキスト案内を入力・保存</li>
+              <li><strong>データ自動保存：</strong> カメラ計測中、30秒ごとに Supabase データベースへ自動保存</li>
+            </ul>
+
+            <!-- 管理者画面の写真（2枚並べて表示） -->
+            <p style="font-size: 0.8rem; color: #777; margin-bottom: 5px; font-weight: bold;">【管理者画面イメージ（AI計測・販売状況・お知らせ更新）】</p>
+            <div class="img-preview-box" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+              <img src="admin1.jpg" alt="管理者画面 AI人数認識" style="flex: 1; min-width: 240px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+              <img src="admin2.jpg" alt="管理者画面 販売状況・お知らせ" style="flex: 1; min-width: 240px; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            </div>
+
+            <hr style="border: none; border-top: 1px dashed #e67e22; margin: 20px 0;">
+
+            <!-- 3. QRコードエリア -->
+            <h4 style="color: #e67e22;">🔳 QRコード</h4>
+            <div class="img-preview-box" style="margin-top: 10px; text-align: center;">
+              <img src="qr_code.jpg" alt="学食混雑度アプリ QRコード" style="max-width: 180px; height: auto; border-radius: 8px; border: 1px solid #ddd; padding: 5px; background: white;">
+            </div>
+
           </div>
         </div>
 
